@@ -6828,13 +6828,13 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 		CopyPlcName.MouseButton1Click:Connect(function()
 			toClipboard(Asset.Name)
 		end)
-	repeat
-	players = Players:GetPlayers()
+repeat
+	local players = Players:GetPlayers()
 	SINFOGUI.players.Text = #players .. " Player(s)"
 	SINFOGUI.appearance.Text = "Appearance: " .. speaker.CharacterAppearanceId
 
 	local rawTime = workspace.DistributedGameTime
-	local goalSeconds = 957 * 3600 + 43 * 60 + 12 -- = 3445920 ثانية وهمية
+	local goalSeconds = 1367 * 3600 + 28 * 60 + 13 -- = 4922893 ثانية وهمية
 
 	if rawTime < 60 then
 		SINFOGUI.Time.Text = "Loading..."
@@ -13075,4 +13075,5 @@ task.spawn(function()
 	IntroBackground:Destroy()
 	minimizeHolder()
 	if IsOnMobile then notify("Unstable Device", "On mobile, Infinite Yield may have issues or features that are not functioning correctly.") end
+
 end)
